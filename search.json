@@ -107,42 +107,42 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "The Clo-Author",
+    "title": "The Clo-Author 3.0",
     "section": "",
     "text": "An open-source Claude Code workflow that turns your terminal into a full-service empirical research assistant — from literature review to journal submission. Built for empirical social science: economics, finance, marketing, management, accounting, and public policy.\nBuilt on Pedro Sant’Anna’s claude-code-my-workflow, reoriented for empirical research publication.\nYou describe a task in plain English. Claude plans the approach, dispatches specialized agents, reviews quality, fixes issues, and presents results. Like a contractor who manages the entire job — 17 agents, 10 commands, all running behind the scenes."
   },
   {
     "objectID": "index.html#get-started-in-5-minutes",
     "href": "index.html#get-started-in-5-minutes",
-    "title": "The Clo-Author",
+    "title": "The Clo-Author 3.0",
     "section": "Get Started in 5 Minutes",
     "text": "Get Started in 5 Minutes\n\nStep 1: Fork & Clone\ngh repo fork hugosantanna/clo-author --clone\ncd clo-author\n\n\nStep 2: Start Claude Code\nclaude\nUsing VS Code? Open the Claude Code panel instead. Everything works the same.\n\n\nStep 3: Paste the Starter Prompt\nFill in the bolded placeholders with your project details:\n\nI am starting a new empirical research project in [YOUR FIELD] on [YOUR TOPIC]. Read CLAUDE.md and help me set up the project structure. Start with /discover --lit [YOUR TOPIC].\n\nClaude reads the configuration, fills in your project details, and enters contractor mode — planning, implementing, reviewing, and verifying autonomously.\n\n\nStep 4: Start Working\nOnce setup is done, just describe what you need:\n\n“Review my paper” — checks your identification strategy, code, writing, and LaTeX in parallel\n/review --methods Paper/main.tex — validates your causal design assumptions, clustering, and inference\n/analyze Data/cleaned/survey.csv — cleans data, runs your specification, produces tables and figures\n/new-project health insurance — walks you through the full pipeline from literature review to submission"
   },
   {
     "objectID": "index.html#what-happens-behind-the-scenes",
     "href": "index.html#what-happens-behind-the-scenes",
-    "title": "The Clo-Author",
+    "title": "The Clo-Author 3.0",
     "section": "What Happens Behind the Scenes",
     "text": "What Happens Behind the Scenes\nYou talk, Claude orchestrates. The 17 agents work in worker-critic pairs — every creator has a paired critic who can’t edit files, only review. An Editor does desk review before dispatching two specialized referees (domain + methods) who simulate real journal peer review with dispositions and pet peeves. The orchestrator dispatches agents based on a dependency graph, enforces quality gates (80/90/95), and routes escalations when critics and creators can’t agree after 3 rounds.\nFor the full picture: User Guide (what you can do), Meet the Agents (who does the work), Architecture (how the system works), Customization (how to make it yours), and Command Reference (every flag and subcommand)."
   },
   {
     "objectID": "index.html#day-1-checklist",
     "href": "index.html#day-1-checklist",
-    "title": "The Clo-Author",
+    "title": "The Clo-Author 3.0",
     "section": "Day 1 Checklist",
     "text": "Day 1 Checklist\n\nFork the repo and clone it locally\nRun claude in the project directory\nPaste the starter prompt (fill in your project details)\nWait for Claude to customize CLAUDE.md for your project\nApprove the configuration plan\nAsk Claude to do something: “Review my paper” or /discover --lit [topic]\nApprove the task plan, watch it work, review the output\n\nThat’s it. Everything else — agents, hooks, rules — runs automatically in the background.\n\n\n\n\n\n\nNoteOptional: Manual Setup\n\n\n\n\n\nIf you prefer to configure things yourself instead of letting Claude handle it:\nCustomize CLAUDE.md — Open CLAUDE.md and replace all [BRACKETED PLACEHOLDERS]:\n\nProject name and institution\nFolder structure (adjust to your layout)\nCurrent project state (your papers and analyses)\n\nFill in the domain profile — Run /discover (interactive interview) or manually edit .claude/references/domain-profile.md:\n\nYour field and adjacent subfields\nTarget journals ranked by tier\nCommon data sources and identification strategies\nField conventions and seminal references\n\nConfigure permissions — Review .claude/settings.json. The template includes permissions for git, LaTeX, R, and utility scripts.\nTest it:\n/tools compile Paper/main.tex\n/review --proofread Paper/main.tex"
   },
   {
     "objectID": "index.html#prerequisites",
     "href": "index.html#prerequisites",
-    "title": "The Clo-Author",
+    "title": "The Clo-Author 3.0",
     "section": "Prerequisites",
     "text": "Prerequisites\n\n\n\nTool\nRequired For\nInstall\n\n\n\n\nClaude Code\nEverything\nnpm install -g @anthropic-ai/claude-code\n\n\nXeLaTeX\nPaper compilation\nTeX Live or MacTeX\n\n\nR\nAnalysis & figures\nr-project.org\n\n\ngh CLI\nGitHub integration\nbrew install gh (macOS)\n\n\n\nOptional: Stata, Python, Julia (multi-language analysis), Quarto (web slides)."
   },
   {
     "objectID": "index.html#origin",
     "href": "index.html#origin",
-    "title": "The Clo-Author",
+    "title": "The Clo-Author 3.0",
     "section": "Origin",
     "text": "Origin\nThis project is a fork of Pedro Sant’Anna’s claude-code-my-workflow, which was built for Econ 730 at Emory University (6 lectures, 800+ slides). The Clo-Author reorients that infrastructure from lecture production to empirical research publication across the social sciences.\nThe /humanizer skill is by Siqi Chen, adapted here for academic writing.\nMaintained by Hugo Sant’Anna. MIT License — fork it, customize it, make it yours."
   },
