@@ -12,17 +12,19 @@ The overall project score that gates submission (>= 95) is a weighted aggregate:
 
 | Component | Weight | Source Agent |
 |-----------|--------|-------------|
-| Literature coverage | 10% | librarian-critic's score of librarian |
-| Data quality | 10% | explorer-critic's score of explorer |
-| Identification validity | 25% | strategist-critic's score of strategist |
-| Code quality | 15% | coder-critic's score of coder |
 | Paper quality | 25% | Average of domain-referee + methods-referee scores |
-| Manuscript polish | 10% | writer-critic's score of writer |
+| Experimental design quality | 20% | strategist-critic's score of strategist |
+| Code quality | 15% | coder-critic's score of coder |
+| Pre-registration & transparency | 10% | strategist-critic's PAP fidelity assessment |
+| Literature coverage | 10% | librarian-critic's score of librarian |
+| Survey instrument quality | 5% | survey-instrument-critic's score (0% and renormalized for non-survey projects) |
+| Data/sample quality | 5% | explorer-critic's score of explorer |
+| Manuscript polish | 5% | writer-critic's score of writer |
 | Replication readiness | 5% | verifier pass/fail (0 or 100) |
 
 ### Minimum Per Component
 
-No component can be below 80 for submission. A perfect literature review can't compensate for broken identification.
+No component can be below 80 for submission. A perfect literature review can't compensate for a flawed experimental design.
 
 ### Score Sources
 

@@ -69,9 +69,9 @@ Workflow:
 2. Check `master_supporting_docs/` for uploaded papers
 3. Read `bibliography_base.bib` for papers already in the project
 4. Dispatch Librarian to search:
-   - Top-5 journals (AER, Econometrica, QJE, JPE, REStud)
+   - Top-3 PS generals (APSR, AJPS, JOP)
    - Field journals from domain-profile.md
-   - NBER/SSRN/IZA working papers
+   - SSRN Political Science eJournals / Google Scholar working papers
    - **Citation chains** — forward and backward citation tracking from key papers. Follow: (a) backward citations (what do the key papers cite?), and (b) forward citations (who cites the key papers?). This is often the most productive search vector.
 5. Assign **proximity scores** to each paper:
    - **1** — Directly competes (same question, similar method)
@@ -108,11 +108,13 @@ Workflow:
 2. Read `.claude/references/domain-profile.md` for common data sources in the field
 3. Understand what variables are needed: treatment, outcome, controls, time period, geography
 4. Dispatch Explorer to search across source categories:
-   - Public microdata (CPS, ACS, NHIS, MEPS, etc.)
-   - Administrative data (Medicare claims, tax records, court records)
-   - Survey data (RAND HRS, PSID, Add Health, NLSY)
-   - International (World Bank, OECD, Eurostat)
-   - Novel/alternative (satellite imagery, web scraping, proprietary)
+   - Survey platforms (Qualtrics, SurveyMonkey, Gorilla)
+   - Recruitment panels (Prolific, MTurk, CloudResearch, Lucid, Dynata, university pools)
+   - National surveys (ANES, CCES/CES, Pew, GSS, YouGov, Gallup)
+   - Political/administrative (voter files, FEC/OpenSecrets, state election records)
+   - International (V-Dem, UCDP/PRIO, Correlates of War, WVS, ISSP)
+   - Public microdata (Census, ACS, CPS — for benchmarking sample representativeness)
+   - Novel/alternative (social media data, legislative text, news corpora)
 5. For each dataset found, report:
    - Name, provider, access level (public/restricted)
    - Key variables available

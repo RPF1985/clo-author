@@ -15,35 +15,61 @@ Given an approved strategy memo (strategist-critic score >= 80), implement the f
 
 ---
 
-## Stage 0: Data Cleaning and Preparation
+## Stage 0: Design Declaration (DeclareDesign)
 
-Before the main specification, always start with data preparation:
+Before any data analysis, declare the full experimental design using DeclareDesign:
 
-1. Load raw data, document dimensions and variable types
-2. Implement sample restrictions from strategy memo — document every drop with counts
-3. Construct treatment variable — exact definition from strategy memo
-4. Construct outcome variable(s) — exact definition
-5. Build control variables — document sources and transformations
-6. Handle missing data — document imputation or exclusion decisions
-7. Merge datasets (if applicable) — document merge rates, investigate non-merges
-8. Produce summary statistics table
-9. Produce balance table (treatment vs control)
+1. `declare_model()` — population, potential outcomes, treatment effect structure
+2. `declare_inquiry()` — estimand (ATE, CACE, AMCE, conditional ATEs)
+3. `declare_assignment()` — randomization scheme (simple, blocked, cluster, factorial)
+4. `declare_measurement()` — outcome measurement, attention checks, exclusion criteria
+5. `declare_estimator()` — estimation strategy matching the design
+6. `diagnose_design()` — power, bias, RMSE, coverage diagnostics
+7. Save design object and diagnosis to `scripts/R/00_design_declaration.R`
+
+Use DeclareDesign as the default framework whenever capable. Only use alternative approaches when DeclareDesign lacks the needed capability, and flag this clearly.
+
+## Stage 1: Data Cleaning and Preparation
+
+1. Load raw survey data, document dimensions and variable types
+2. Apply pre-registered exclusion criteria:
+   - Attention check failures
+   - Comprehension check failures
+   - Speeders (completion time < median/3)
+   - Straight-liners (zero variance across Likert batteries)
+   - Document every exclusion with counts
+3. Produce CONSORT flow diagram counts: enrolled → randomized → allocated → analyzed
+4. Construct treatment variable — exact definition from strategy memo
+5. Construct outcome variable(s) — exact definition, scale construction if composite
+6. Build pre-treatment covariates for heterogeneity analysis
+7. Calculate AAPOR response/completion rates
+8. Produce summary statistics table (demographics, key variables)
+9. Produce balance table (treatment vs control arms)
 10. Save cleaned dataset with documentation
 
-## Stage 1: Main Specification
+## Stage 2: Main Specification
 
 - Translate the strategy memo's pseudo-code into working code
 - Use the recommended estimator and package
-- Match the exact specification: fixed effects, clustering, functional form
+- For experiments: OLS with robust (HC2) SEs via `estimatr::lm_robust()` as default
+- For conjoint: `cregg::cj()` or `cjoint` for AMCE estimation
+- For ordered outcomes: `MASS::polr()` or `ordinal::clm()`
+- Match the exact specification from the design declaration
 - Produce the main results table
+- Randomization inference as a complement to parametric tests when appropriate
 
-## Stage 2: Robustness Checks
+## Stage 3: Robustness Checks
 
 - Every robustness test from the strategy memo
-- Alternative specifications, placebos, sensitivity analyses
-- Oster bounds, pre-trends tests, McCrary tests (as applicable)
+- Multiple comparison corrections (Bonferroni, Benjamini-Hochberg)
+- Equivalence tests (TOST) for claimed null effects
+- Sensitivity to exclusion criteria (include/exclude failed attention checks)
+- Manipulation check analysis
+- Heterogeneous treatment effects by pre-specified subgroups (partisanship, ideology)
+- Alternative specifications, placebos (as applicable)
+- For observational designs: Oster bounds, pre-trends tests, McCrary tests
 
-## Stage 3: Output
+## Stage 4: Output
 
 - Publication-ready tables (LaTeX via `modelsummary` or `fixest::etable`)
 - Publication-ready figures (ggplot2 with consistent theme)

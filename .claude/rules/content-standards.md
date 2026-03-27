@@ -17,7 +17,7 @@ paths:
 
 ## 1. Table Standards
 
-**Target:** Publication-quality tables matching AER, QJE, and Econometrica formatting.
+**Target:** Publication-quality tables matching APSR, AJPS, and JOP formatting.
 
 ### No In-Table Titles or Notes
 
@@ -67,9 +67,9 @@ Treatment        & 0.045**  & 0.038*   & 0.052*** \\
 - **Column (1), (2), ...** headers in the first row after `\toprule`
 - **Dependent variable** stated in a spanning header or the first subheader row
 - **Variable names** left-aligned, human-readable (not raw R variable names)
-  - `Log wages` not `ln_wage_deflated`
-  - `Female` not `sex_2`
-  - `Years of education` not `educ_yrs`
+  - `Support for military action` not `mil_support_q3`
+  - `Republican` not `pid3_1`
+  - `Ideology (7-point scale)` not `ideo7`
 - **Numeric columns** right-aligned or decimal-aligned
 - **N**, **R²**, **Fixed effects** (Yes/No), **Controls** (Yes/No) at the bottom before `\bottomrule`
 
@@ -174,10 +174,12 @@ tables/
 Pattern: `{table_type}_{content_description}.tex`
 
 - `sumstats_` for summary statistics
-- `balance_` for balance / pre-treatment tests
+- `balance_` for randomization balance tests
 - `reg_` for regression output
-- `did_` for difference-in-differences specific tables
-- `first_stage_` for IV first stage
+- `exp_` for experimental results (treatment effects)
+- `conjoint_` for AMCE and marginal means results
+- `het_` for heterogeneous treatment effects
+- `manipulation_check_` for manipulation check results
 
 ### Prohibited Patterns
 
@@ -186,7 +188,7 @@ Pattern: `{table_type}_{content_description}.tex`
 | Title row inside the table | Titles go in `\caption{}`, not the table body |
 | Notes embedded in table body | Notes go below via `\begin{tablenotes}` |
 | `\hline` | Use `\toprule` / `\midrule` / `\bottomrule` (booktabs) |
-| Vertical rules (`\|` in column spec) | Never used in economics journals |
+| Vertical rules (`\|` in column spec) | Never used in political science journals |
 | `stargazer` package | Deprecated workflow; use `modelsummary` or `fixest::etable` |
 | Raw variable names in labels | Human-readable labels required |
 | `xtable` without booktabs | Produces non-journal-quality output |
@@ -202,13 +204,14 @@ Use these as defaults. Adapt columns based on the paper's needs (e.g., add Min/M
                         &  Mean   &  SD     \\
 \midrule
 \multicolumn{3}{l}{\textit{Continuous variables}} \\
-\quad Wages (USD)       &  45,230 &  12,400 \\
-\quad Years of education&  13.2   &  2.8    \\
 \quad Age               &  38.5   &  11.2   \\
+\quad Ideology (7-pt)   &  4.1    &  1.8    \\
+\quad Political knowledge&  3.2   &  1.4    \\
 \\[0.5em]
 \multicolumn{3}{l}{\textit{Categorical variables (\%)}} \\
-\quad Female            &  48.2   &         \\
-\quad College degree    &  32.5   &         \\
+\quad Female            &  51.3   &         \\
+\quad Republican        &  28.4   &         \\
+\quad College degree    &  42.1   &         \\
 \bottomrule
 ```
 - Default: Mean and SD in separate columns (never stacked with parentheses — that's for regression SEs)
@@ -240,12 +243,12 @@ R$^2$                   &  0.05   &  0.12   &         &         \\
 \toprule
                         &  (1)    &  (2)    &  (3)    &  (4)    \\
 \midrule
-\multicolumn{5}{l}{\textit{Panel A: Wages}} \\
+\multicolumn{5}{l}{\textit{Panel A: Support for military action}} \\
 \midrule
 Treatment               &  0.045**&  0.038* &  0.052**&  0.041* \\
                         & (0.021) & (0.020) & (0.025) & (0.022) \\
 \\[0.5em]
-\multicolumn{5}{l}{\textit{Panel B: Employment}} \\
+\multicolumn{5}{l}{\textit{Panel B: Perceived legitimacy}} \\
 \midrule
 Treatment               &  0.021  &  0.033* &  0.015  &  0.028  \\
                         & (0.018) & (0.017) & (0.020) & (0.019) \\
@@ -264,9 +267,10 @@ Observations            &  10,000 &  10,000 &  10,000 &  10,000 \\
 \toprule
 Variable                &  Treatment &  Control &  Difference &  SE     &  p-value \\
 \midrule
-Wages (USD)             &  45,800    &  44,650  &  1,150      &  (890)  &  0.197   \\
-Years of education      &  13.4      &  13.1    &  0.3        &  (0.2)  &  0.134   \\
-Female (\%)             &  47.8      &  48.6    &  -0.8       &  (1.2)  &  0.505   \\
+Age                     &  38.2      &  38.8    &  -0.6       &  (0.5)  &  0.232   \\
+Female (\%)             &  50.8      &  51.7    &  -0.9       &  (1.2)  &  0.453   \\
+Republican (\%)         &  29.1      &  27.8    &  1.3        &  (1.1)  &  0.237   \\
+Ideology (7-pt)         &  4.12      &  4.08    &  0.04       &  (0.08) &  0.617   \\
 \bottomrule
 ```
 

@@ -40,6 +40,15 @@ Thumbs.db
 .claude/settings.local.json
 .claude/state/
 
+# DeclareDesign replication materials (extracted, not tracked)
+.claude/references/declaredesign-replication/
+
+# Large reference files (copied locally by /create-repo, not pushed to GitHub)
+.claude/references/declaredesignbook/
+.claude/references/declaredesign-book.pdf
+.claude/references/*.pdf
+.claude/references/*.docx
+
 # IDE
 .vscode/
 .idea/

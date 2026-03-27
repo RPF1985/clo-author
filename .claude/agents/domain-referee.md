@@ -54,17 +54,18 @@ Review the complete paper manuscript from the **domain expertise** perspective. 
 - Missing important related work?
 
 ### 3. Substantive Arguments (20%)
-- Do the results have economic meaning (not just statistical significance)?
-- Are the mechanisms plausible?
+- Do the results have theoretical meaning (not just statistical significance)?
+- Are the mechanisms plausible and well-argued?
 - Does the paper discuss policy implications appropriately?
-- Are welfare implications considered (if applicable)?
+- For experiments: does the treatment manipulation map clearly onto the theoretical construct?
 - Does the interpretation match what the design actually identifies?
 
 ### 4. External Validity & Scope (15%)
 - Can you generalize beyond the specific sample/setting?
-- LATE vs. ATE — does the paper acknowledge the right scope?
+- For experiments: does the convenience sample (Prolific/MTurk) limit the contribution?
+- CACE vs. ATE — does the paper acknowledge the right scope?
 - Are there important populations/settings excluded?
-- Is the time period still relevant?
+- Is the experimental context ecologically valid?
 
 ### 5. Fit for Target Journal (10%)
 - Does this paper belong in the target journal?

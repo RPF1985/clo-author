@@ -83,23 +83,29 @@ Dispatch Strategist in PAP mode to produce all standard sections:
 
 Ask the user which registry platform they plan to use (if unclear from context):
 
-**AEA RCT Registry:**
-- Most structured format. All fields required.
-- Must be registered before intervention begins.
-- Strict section ordering: hypotheses → outcomes → analysis → power.
-- Requires IRB information and funding sources.
+**EGAP (Evidence in Governance and Politics):**
+- Political science and governance focused — primary registry for this field.
+- Emphasizes pre-specification of heterogeneous treatment effects.
+- Additional governance and ethics questions required.
+- Requires description of implementing partners and field conditions.
+
+**AsPredicted:**
+- Simple 9-question format — fast to complete.
+- Good for straightforward survey experiments.
+- Creates a time-stamped, anonymized pre-registration.
+- Does not require as much detail as EGAP or OSF.
 
 **OSF (Open Science Framework):**
-- More flexible format. Good for observational studies and natural experiments.
+- More flexible format. Good for observational studies and complex designs.
 - Allows iterative updates with version history.
 - Less rigid section structure — can adapt to study design.
 - Supports pre-registration of observational/archival studies.
 
-**EGAP (Evidence in Governance and Politics):**
-- Development economics and political science focused.
-- Additional governance and ethics questions required.
-- Emphasizes pre-specification of heterogeneous treatment effects.
-- Requires description of implementing partners and field conditions.
+**AEA RCT Registry:**
+- Primarily used in economics — less common in political science.
+- Most structured format. All fields required.
+- Must be registered before intervention begins.
+- Consider only if collaborating with economists or targeting economics journals.
 
 #### Observational Study PAP Adaptation
 

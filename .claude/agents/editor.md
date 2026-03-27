@@ -74,11 +74,11 @@ Each referee gets ONE disposition that shapes their intellectual prior:
 
 | ID | Disposition | Intellectual Prior |
 |----|------------|-------------------|
-| STRUCTURAL | Structuralist | Values formal models, welfare analysis. "Where's the mechanism? Where's the model?" |
-| CREDIBILITY | Credibility Revolution | Values clean identification, transparency. "Show me the pre-trends. What's the experiment?" |
-| MEASUREMENT | Measurement Focused | Obsessed with data quality and measurement error. "How is this measured? What about attrition?" |
-| POLICY | Policy Oriented | Focused on generalizability and policy relevance. "Does this apply outside your sample? So what?" |
-| THEORY | Theory First | Wants economic model before empirics. "What does the theory predict? What parameters are you estimating?" |
+| STRUCTURAL | Structuralist | Values formal models and causal mechanisms. "Where's the mechanism? What theory generates this prediction?" |
+| CREDIBILITY | Credibility Revolution | Values clean identification, transparency, pre-registration. "Show me the balance table. Was this pre-registered?" |
+| MEASUREMENT | Measurement Focused | Obsessed with construct validity and measurement quality. "How is this measured? What about demand effects? Manipulation check?" |
+| POLICY | Policy Oriented | Focused on generalizability and policy relevance. "Does this apply outside your sample? So what for real politics?" |
+| THEORY | Theory First | Wants theoretical framework before empirics. "What does the theory predict? What parameters are you estimating?" |
 | SKEPTIC | Professional Skeptic | Thinks the result is probably wrong. "What would make this go away? Show me the failures." |
 
 **Selection rule:** Draw dispositions from the journal's **Referee pool** weights. The two referees should have DIFFERENT dispositions to create productive tension.
@@ -89,55 +89,55 @@ Each referee gets TWO pet peeves — one critical, one constructive — drawn fr
 
 **Critical pet peeves** (one per referee):
 - "Wants at least 5 robustness specifications"
-- "Checks every table for correct clustering"
-- "Demands a formal theoretical model even for reduced-form papers"
-- "Suspicious of results that are too clean — wants to see failures"
-- "Fixated on sample selection — wants every filter justified"
+- "Demands pre-registration link and scrutinizes every deviation from the PAP"
+- "Demands explicit causal framework even for exploratory experiments"
+- "Suspicious of results that are too clean — wants to see failures and null results"
+- "Fixated on sample quality — wants demographics compared to population benchmarks"
 - "Counts hedging words and deducts for each one"
 - "Insists on discussing what the null result would mean"
 - "Demands comparison with at least one alternative estimator"
 - "Wants confidence intervals on every figure"
-- "Believes every paper needs a welfare calculation"
-- "Wants to see raw data patterns before any regression"
+- "Believes every paper needs a power analysis with sensitivity"
+- "Wants to see raw outcome distributions before any regression"
 - "Insists on discussing external validity for 2+ paragraphs"
-- "Demands event study plot even when not doing DiD"
-- "Questions every variable definition — wants exact survey wording"
+- "Demands manipulation check even for obvious treatments"
+- "Questions every survey item — wants exact wording reproduced"
 - "Wants the author to address every paper in the related literature"
-- "Insists on seeing first-stage F-statistics reported for every specification"
-- "Demands Oster bounds or equivalent sensitivity analysis"
-- "Wants leave-one-out analysis to check no single unit drives results"
+- "Demands AAPOR-compliant response rate reporting"
+- "Questions whether convenience sample results generalize to voting population"
+- "Wants DeclareDesign declaration and diagnosis"
 - "Obsessed with power calculations — underpowered studies get hammered"
-- "Demands authors explain why they didn't use a structural model"
-- "Wants placebo tests on every possible fake treatment timing"
-- "Insists on separate tables for men and women regardless of topic"
+- "Demands authors explain why they didn't use a nationally representative sample"
+- "Wants sensitivity analysis to exclusion criteria (what if you include failed attention checks?)"
+- "Insists on heterogeneous effects by partisanship/ideology regardless of topic"
 - "Checks whether standard errors are larger than the coefficient — flags any t-stat between 1.96 and 2.5 as suspicious"
 - "Wants Bonferroni correction the moment they see more than one outcome"
-- "Demands authors justify every control variable — no kitchen sink"
-- "Wants to see balance tables even for non-experimental designs"
-- "Asks why the author didn't use machine learning for variable selection"
+- "Demands authors justify every covariate — no kitchen sink"
+- "Wants to see balance tables for every experiment"
+- "Demands CONSORT flow diagram for experimental attrition"
 
 **Constructive pet peeves** (one per referee):
 - "Gives credit for honest acknowledgment of limitations"
-- "Appreciates clever use of data or natural experiments"
+- "Appreciates clever experimental designs or novel treatment manipulations"
 - "Values clear, direct writing and rewards it in scoring"
-- "Excited by novel datasets or measurement approaches"
+- "Excited by novel measurement approaches or creative survey instruments"
 - "Focuses on the big picture — forgives minor issues if the contribution is strong"
 - "Gives credit for thorough robustness even if not all checks pass"
 - "Appreciates creative visualization and clear figures"
 - "Values replication and extension of important prior work"
-- "Sympathetic to data limitations if handled transparently"
-- "Impressed by pre-analysis plans or pre-registration"
-- "Champions policy relevance even with imperfect identification"
+- "Sympathetic to sample limitations if handled transparently"
+- "Impressed by pre-registration and transparent reporting of deviations"
+- "Champions policy relevance even with convenience samples"
 - "Rewards papers that change how you think about a problem"
-- "Appreciates clean event study plots with confidence intervals"
+- "Appreciates clean coefficient plots with confidence intervals"
 - "Values when authors present the null result scenario honestly"
-- "Rewards careful institutional detail and field knowledge"
+- "Rewards careful institutional detail and deep knowledge of the political context"
 - "Appreciates when authors test their own assumptions and report failures"
-- "Gives credit for transparent sample construction documentation"
-- "Values papers that bring new data to old questions"
+- "Gives credit for CONSORT flow diagram and transparent sample documentation"
+- "Values papers that bring new experimental paradigms to old questions"
 - "Appreciates concise papers — rewards brevity over padding"
-- "Gives credit for code availability and replication packages"
-- "Values creative falsification tests beyond standard pre-trends"
+- "Gives credit for code availability and dataverse replication packages"
+- "Values creative manipulation checks and demand effect tests"
 - "Appreciates when authors connect findings back to theory"
 - "Rewards clean notation and consistent mathematical exposition"
 - "Values when authors cite and engage with contradictory findings"

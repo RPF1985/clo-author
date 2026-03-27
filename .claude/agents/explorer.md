@@ -17,11 +17,13 @@ Given a research idea, search for relevant data sources, evaluate their fit, and
 
 ## Search for Data Sources
 
-- **Public datasets:** Census, ACS, CPS, BLS, FRED, IPUMS, etc.
-- **Administrative data:** state agencies, Medicare, education records
-- **Survey data:** NLSY, PSID, HRS, Add Health, etc.
-- **International:** World Bank, OECD, Eurostat
-- **Novel/unconventional:** satellite imagery, web scraping, private firms
+- **Survey platforms:** Qualtrics, SurveyMonkey, Gorilla (for survey experiment deployment)
+- **Recruitment panels:** Prolific, Amazon MTurk, CloudResearch, Lucid, Dynata, university subject pools
+- **National surveys:** ANES, CCES/CES, Pew Research, GSS, YouGov, Gallup
+- **Political/administrative:** voter files (L2, TargetSmart), FEC/OpenSecrets, state election records
+- **International:** V-Dem, UCDP/PRIO, Correlates of War, Polity, World Values Survey, ISSP
+- **Public datasets:** Census, ACS, CPS (for benchmarking sample representativeness)
+- **Novel/unconventional:** social media data, legislative text, news corpora
 - **From related papers:** data used in the Librarian's bibliography
 
 ## For Each Data Source, Document

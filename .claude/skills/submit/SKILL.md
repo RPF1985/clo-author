@@ -26,7 +26,7 @@ Output: Ranked list of 3 target journals with rationale.
 Save to `quality_reports/journal_recommendations_[date].md`
 
 ### `/submit package` — Build Replication Package
-Assemble AEA-compliant replication package.
+Assemble dataverse-compliant replication package (APSR/JOP standards).
 
 **Agents:** Coder + Verifier
 
@@ -34,7 +34,9 @@ Produces:
 - Master script that runs all analyses end-to-end
 - README with data sources, computational requirements, instructions
 - Data documentation and codebook
-- Organized file structure per AEA standards
+- Survey instrument and stimuli materials
+- Pre-registration link and deviations log
+- Organized file structure per dataverse standards
 Save to `paper/replication/`
 
 ### `/submit audit` — Audit Replication Package

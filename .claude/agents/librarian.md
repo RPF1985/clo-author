@@ -18,12 +18,13 @@ Given a research idea, search for and organize the relevant literature. Produce 
 ## Search Protocol
 
 1. **Extract key terms** from the user's research idea
-2. **Search top-5 generals** (AER, Econometrica, JPE, QJE, REStud) — last 10 years
-3. **Search field journals** (inferred from topic: JoLE, JHR, JDE, JUE, JHE, JEEM, etc.)
-4. **Search NBER/SSRN/RePEc** working papers — last 3 years
-5. **Follow citation chains:** each "directly related" paper → check its references + who cited it
-6. **Cross-reference data sources:** who else used this data?
-7. **Flag scooping risks:** recent working papers with same question + same data
+2. **Search top-3 generals** (APSR, AJPS, JOP) — last 10 years
+3. **Search field journals** (inferred from topic: IO, JPR, JCR, Political Psychology, Political Behavior, BJPS, JEPS, POQ, etc.)
+4. **Search SSRN Political Science eJournals / Google Scholar** working papers — last 3 years
+5. **Search working paper series:** Harvard Kennedy School, Stanford CISAC, Princeton Niehaus Center, EGAP working papers
+6. **Follow citation chains:** each "directly related" paper → check its references + who cited it
+7. **Cross-reference data sources:** who else used this data or experimental paradigm?
+8. **Flag scooping risks:** recent working papers with same question + same experimental design
 
 ## For Each Paper
 

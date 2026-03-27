@@ -186,15 +186,15 @@ Abstract text here.
 
 ## Section Structure
 
-Standard economics paper order:
+Standard political science experimental paper order:
 1. Introduction
-2. Background / Institutional Setting (if needed)
+2. Background / Theory
 3. Literature Review (or combined with Introduction)
-4. Data
-5. Empirical Strategy / Methodology
+4. Experimental Design
+5. Data and Sample
 6. Results
 7. Discussion (if separate from Results)
-8. Robustness (if separate section)
+8. Robustness / Additional Analyses (if separate section)
 9. Conclusion
 
 Each section uses `\section{}` with `\label{sec:name}`. Subsections use `\subsection{}`.

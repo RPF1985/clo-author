@@ -13,10 +13,11 @@
 | librarian | librarian-critic | Literature coverage, gaps, recency |
 | explorer | explorer-critic | Data feasibility, quality, identification fit |
 | data-engineer | coder-critic | Data pipeline quality, reproducibility, transformation correctness |
-| strategist | strategist-critic | Identification validity, assumptions, robustness |
+| strategist | strategist-critic | Identification/design validity, assumptions, robustness |
 | coder | coder-critic | Code quality, reproducibility, code-strategy alignment |
 | writer | writer-critic | Manuscript polish, LaTeX quality, hedging |
 | storyteller | storyteller-critic | Talk structure, audience calibration, visual quality |
+| survey-instrument-writer | survey-instrument-critic | Question wording, bias, order effects, PAP alignment |
 
 ### Peer Review (Special Case)
 
@@ -102,6 +103,7 @@ Round 3: Critic reviews → Worker fixes
 | librarian + librarian-critic | User | Scope disagreement — user decides breadth vs depth |
 | explorer + explorer-critic | User | Data feasibility deadlock — user decides resource trade-offs |
 | storyteller + storyteller-critic | User | Talk scope/format disagreement |
+| survey-instrument-writer + survey-instrument-critic | User | Instrument design disagreement — needs researcher judgment on wording |
 
 ### Rules
 

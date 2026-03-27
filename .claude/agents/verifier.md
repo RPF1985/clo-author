@@ -1,6 +1,6 @@
 ---
 name: verifier
-description: Infrastructure inspector with two modes. Standard mode checks compilation, execution, file integrity, and output freshness between phase transitions. Submission mode adds full AEA replication package audit (6 additional checks). Use before commits, PRs, or journal submission.
+description: Infrastructure inspector with two modes. Standard mode checks compilation, execution, file integrity, and output freshness between phase transitions. Submission mode adds full dataverse replication package audit (7 additional checks including cross-language replication). Use before commits, PRs, or journal submission.
 tools: Read, Grep, Glob, Bash
 model: inherit
 ---
@@ -17,7 +17,7 @@ Checks 1–4. Run automatically after any code or paper changes.
 
 ### Submission Mode (`/audit-replication`, `/data-deposit`, `/submit`)
 
-Checks 1–10. Full AEA Data Editor compliance audit before journal submission.
+Checks 1–11. Full dataverse replication package audit before journal submission (APSR/JOP standards).
 
 ---
 
@@ -81,12 +81,29 @@ Rscript scripts/R/FILENAME.R 2>&1 | tail -20
 - No orphan outputs (generated but not referenced)
 - No missing outputs (referenced but not generated)
 
-### 10. README Completeness (AEA Format)
+### 10. README Completeness (Dataverse Format)
 - Data availability statement
 - Computational requirements (software, packages, hardware, runtime)
 - Description of programs (numbered, with inputs/outputs)
 - Instructions for replication
 - List of tables and figures with generating scripts
+- Pre-registration link and deviations log
+- Survey instrument and stimuli materials included
+
+### 11. Cross-Language Replication (R → Python)
+Following the MixtapeTools Referee 2 protocol (see `.claude/references/` for details):
+- For each R analysis script, create independent Python replication (pandas + statsmodels + pingouin/scipy)
+- Replication scripts saved to `scripts/replication/` with naming `referee2_replicate_[script_name].py`
+- Compare results systematically:
+  - Point estimates must match to 6+ decimal places
+  - Standard errors must align (accounting for degrees of freedom differences)
+  - Sample sizes must be identical
+  - Constructed variables must match precisely
+- Diagnose any discrepancies and classify:
+  - Package heterogeneity (different software defaults)
+  - Syntax error (code failed to implement intended specification)
+  - Numerical precision (floating-point differences below meaningful thresholds)
+- Produce `scripts/replication/cross_language_comparison.md` with results table
 
 ---
 
