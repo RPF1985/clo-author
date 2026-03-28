@@ -27,6 +27,7 @@
       "Bash(BIBINPUTS=*)",
       "Bash(latexmk *)",
       "Bash(bibtex *)",
+      "Bash(biber *)",
       "Bash(pdfinfo *)",
       "Bash(pdf2svg *)",
       "Bash(quarto render *)",
@@ -52,9 +53,9 @@
       "Bash(mv .claude/rules/journal-profiles.md .claude/references/journal-profiles.md)",
       "Bash(echo \"meta-governance.md: 252 -> 20 lines \\(saved 232\\)\")"
     ],
-    "additionalDirectories": [
-      "/Users/hsantanna/repos/clo-author/.claude/rules/archive",
-      "/Users/hsantanna/repos/clo-author/.claude/rules"
+    "deny": [
+      "Write(/**/../*)",
+      "Edit(/**/../*)"
     ]
   },
   "hooks": {

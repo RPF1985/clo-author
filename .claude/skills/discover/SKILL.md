@@ -68,7 +68,8 @@ Workflow:
 1. Read `.claude/references/domain-profile.md` for field journals and seminal references
 2. Check `master_supporting_docs/` for uploaded papers
 3. Read `bibliography_base.bib` for papers already in the project
-4. Dispatch Librarian to search:
+4. **Assess scope:** If the topic spans 4+ search dimensions or is likely to require 50+ papers, split the work across 2-3 parallel librarian agents, each covering a subset of dimensions. Each agent writes its output immediately. A final merge pass combines and deduplicates. See `librarian.md` for details.
+5. Dispatch Librarian to search:
    - Top-3 PS generals (APSR, AJPS, JOP)
    - Field journals from domain-profile.md
    - SSRN Political Science eJournals / Google Scholar working papers

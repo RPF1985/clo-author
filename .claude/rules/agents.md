@@ -27,6 +27,17 @@ Peer Review uses a different structure — the Orchestrator dispatches two indep
 2. Both referees produce scored reports
 3. Orchestrator synthesizes a decision: Accept / Minor Revisions / Major Revisions / Reject
 
+### Worktree Isolation for Referees
+
+**Both domain-referee and methods-referee MUST be dispatched with `isolation: "worktree"`.** This is a hard requirement, not a suggestion.
+
+```
+Agent(subagent_type="domain-referee", isolation="worktree", ...)
+Agent(subagent_type="methods-referee", isolation="worktree", ...)
+```
+
+**Why:** Prompt-level instructions to be "blind and independent" are unenforceable — both agents share the same working directory and can read each other's reports. Worktree isolation gives each referee a separate copy of the repository, making independence a technical guarantee rather than a behavioral request.
+
 ### Enforcement
 
 - The Orchestrator checks: if a creator artifact exists without a critic score, it is **not approved**
