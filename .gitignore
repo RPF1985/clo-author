@@ -40,6 +40,9 @@ Thumbs.db
 .claude/settings.local.json
 .claude/state/
 
+# MCP server config (contains API keys — never commit)
+.mcp.json
+
 # DeclareDesign replication materials (extracted, not tracked)
 .claude/references/declaredesign-replication/
 

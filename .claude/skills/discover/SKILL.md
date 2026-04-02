@@ -66,23 +66,24 @@ Search and synthesize academic literature.
 
 Workflow:
 1. Read `.claude/references/domain-profile.md` for field journals and seminal references
-2. Check `master_supporting_docs/` for uploaded papers
-3. Read `bibliography_base.bib` for papers already in the project
-4. **Assess scope:** If the topic spans 4+ search dimensions or is likely to require 50+ papers, split the work across 2-3 parallel librarian agents, each covering a subset of dimensions. Each agent writes its output immediately. A final merge pass combines and deduplicates. See `librarian.md` for details.
+2. Search user's Zotero library for existing papers on the topic (via Zotero MCP tools, if configured — skip silently if not available)
+3. Check `master_supporting_docs/` for uploaded papers
+4. Read `bibliography_base.bib` for papers already in the project; cross-reference with Zotero to avoid duplicates
 5. Dispatch Librarian to search:
    - Top-3 PS generals (APSR, AJPS, JOP)
    - Field journals from domain-profile.md
    - SSRN Political Science eJournals / Google Scholar working papers
    - **Citation chains** — forward and backward citation tracking from key papers. Follow: (a) backward citations (what do the key papers cite?), and (b) forward citations (who cites the key papers?). This is often the most productive search vector.
-5. Assign **proximity scores** to each paper:
+6. Assign **proximity scores** to each paper:
    - **1** — Directly competes (same question, similar method)
    - **2** — Closely related (same question, different method or setting)
    - **3** — Related (overlapping topic, different angle)
    - **4** — Background (provides theory, method, or context)
    - **5** — Tangentially related (useful framing only)
-6. Dispatch librarian-critic to check coverage, gaps, recency, scope
-7. If gaps found, re-dispatch Librarian for targeted search (max 1 round)
-8. Save to `quality_reports/lit_review_[topic].md`
+7. Dispatch librarian-critic to check coverage, gaps, recency, scope
+8. If gaps found, re-dispatch Librarian for targeted search (max 1 round)
+9. Save to `quality_reports/lit_review_[topic].md`
+10. Add newly discovered papers to Zotero via `zotero_add_by_doi` (after dedup check) for papers with DOIs — if Zotero MCP is configured
 
 **Unverified citations:** If you cannot verify a citation, mark the BibTeX entry with `% UNVERIFIED`. Do NOT fabricate or guess citation details. Note when working papers have been published — cite the published version.
 

@@ -51,8 +51,11 @@ powershell.exe -ExecutionPolicy Bypass -File scripts/New-ResearchProject.ps1 -Na
 
 The new project will have all clo-author infrastructure. Next steps:
 1. Fill in `CLAUDE.md` placeholders (project name, etc.)
-2. Run `/discover interview [topic]` to build the research specification
-3. Or start directly with `/strategize [question]`
+2. If you skipped Zotero setup during provisioning, configure it now (see CLAUDE.md "Optional: Zotero Integration")
+3. Run `/discover interview [topic]` to build the research specification
+4. Or start directly with `/strategize [question]`
+
+Note: The provisioning script prompts for optional Zotero integration (step 5/7). If configured, the librarian agent will search your Zotero library during literature review.
 
 ---
 

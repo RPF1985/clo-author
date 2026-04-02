@@ -26,8 +26,31 @@
 ## Getting Started
 
 1. Fill in the `[BRACKETED PLACEHOLDERS]` in this file
-2. Run `/discover interview [topic]` to build your research specification
-3. Or run `/new-project [topic]` for the full orchestrated pipeline
+2. (Optional) Configure Zotero MCP — see below
+3. Run `/discover interview [topic]` to build your research specification
+4. Or run `/new-project [topic]` for the full orchestrated pipeline
+
+---
+
+## Optional: Zotero Integration
+
+If you use [Zotero](https://www.zotero.org/) to manage your research library, you can connect it to Claude Code via the [zotero-mcp](https://github.com/54yyyu/zotero-mcp) MCP server. This lets the librarian agent search your existing library, read full text, pull BibTeX, extract your annotations, and add newly discovered papers.
+
+**Setup:**
+1. Install: `pip install "zotero-mcp-server[all]"`
+2. Get your API key from https://www.zotero.org/settings/keys and your library ID
+3. In Zotero desktop: Preferences → Advanced → enable "Allow other applications on this computer to communicate with Zotero"
+4. Register with Claude Code (hybrid mode — local reads, web API writes):
+   ```bash
+   claude mcp add --transport stdio --scope project \
+     --env ZOTERO_LOCAL=true \
+     --env ZOTERO_API_KEY=<your-key> \
+     --env ZOTERO_LIBRARY_ID=<your-id> \
+     zotero -- cmd /c zotero-mcp serve
+   ```
+5. (Optional) Build semantic search index: `zotero-mcp update-db --fulltext`
+
+**Note:** `.mcp.json` is gitignored — your API key stays local. If you provision projects with `/create-repo`, the setup script will prompt for Zotero credentials automatically.
 
 ---
 

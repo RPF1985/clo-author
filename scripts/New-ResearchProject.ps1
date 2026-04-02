@@ -58,7 +58,7 @@ Write-Host "  Template: $TemplatePath" -ForegroundColor Gray
 Write-Host "  Target:   $ProjectDir" -ForegroundColor Gray
 
 # Step 1: Create private GitHub repo
-Write-Host "`n[1/5] Creating private GitHub repository..." -ForegroundColor Yellow
+Write-Host "`n[1/7] Creating private GitHub repository..." -ForegroundColor Yellow
 $repoArgs = @("repo", "create", $Name, "--private", "--confirm")
 if ($Org) {
     $repoArgs = @("repo", "create", "$Org/$Name", "--private", "--confirm")
@@ -70,21 +70,21 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # Step 2: Clone template (without git history)
-Write-Host "[2/5] Copying template to $ProjectDir..." -ForegroundColor Yellow
+Write-Host "[2/7] Copying template to $ProjectDir..." -ForegroundColor Yellow
 Copy-Item -Path $TemplatePath -Destination $ProjectDir -Recurse -Force
 
 # Remove template's git history
 Remove-Item -Path (Join-Path $ProjectDir ".git") -Recurse -Force -ErrorAction SilentlyContinue
 
 # Step 3: Initialize fresh git repo
-Write-Host "[3/5] Initializing git repository..." -ForegroundColor Yellow
+Write-Host "[3/7] Initializing git repository..." -ForegroundColor Yellow
 Push-Location $ProjectDir
 & git init -b main
 & git add -A
 & git commit -m "Initial project from clo-author template"
 
 # Step 4: Set remote and push
-Write-Host "[4/5] Setting remote and pushing..." -ForegroundColor Yellow
+Write-Host "[4/7] Setting remote and pushing..." -ForegroundColor Yellow
 if ($Org) {
     & git remote add origin "https://github.com/$Org/$Name.git"
 } else {
@@ -93,8 +93,56 @@ if ($Org) {
 }
 & git push -u origin main
 
-# Step 5: Open VS Code
-Write-Host "[5/5] Opening VS Code..." -ForegroundColor Yellow
+# Step 5: Configure Zotero integration (optional)
+Write-Host "`n[5/7] Configure Zotero integration?" -ForegroundColor Yellow
+$configZotero = Read-Host "  Connect your Zotero library to Claude Code? (y/n)"
+if ($configZotero -eq 'y') {
+    # Check prerequisites
+    $hasPip = Get-Command pip -ErrorAction SilentlyContinue
+    $hasClaude = Get-Command claude -ErrorAction SilentlyContinue
+
+    if (-not $hasPip) {
+        Write-Warning "pip not found. Install zotero-mcp-server manually: pip install 'zotero-mcp-server[all]'"
+    } elseif (-not $hasClaude) {
+        Write-Warning "claude CLI not found. Install Claude Code first, then configure Zotero manually."
+    } else {
+        # Check if zotero-mcp is installed
+        $zoteroMcp = Get-Command zotero-mcp -ErrorAction SilentlyContinue
+        if (-not $zoteroMcp) {
+            Write-Host "  Installing zotero-mcp-server..." -ForegroundColor Gray
+            & pip install "zotero-mcp-server[all]"
+        }
+
+        # Prompt for credentials
+        Write-Host "  Get your API key from https://www.zotero.org/settings/keys" -ForegroundColor Gray
+        $apiKey = Read-Host "  Zotero API key" -AsSecureString
+        $apiKeyPlain = [Runtime.InteropServices.Marshal]::PtrToStringAuto(
+            [Runtime.InteropServices.Marshal]::SecureStringToBSTR($apiKey))
+        $libraryId = Read-Host "  Zotero library ID"
+
+        if ($apiKeyPlain -and $libraryId) {
+            Write-Host "  Registering Zotero MCP server..." -ForegroundColor Gray
+            & claude mcp add --transport stdio --scope project `
+                --env "ZOTERO_LOCAL=true" `
+                --env "ZOTERO_API_KEY=$apiKeyPlain" `
+                --env "ZOTERO_LIBRARY_ID=$libraryId" `
+                zotero -- cmd /c zotero-mcp serve
+
+            if ($LASTEXITCODE -eq 0) {
+                Write-Host "  Zotero integration configured successfully." -ForegroundColor Green
+            } else {
+                Write-Warning "  Zotero MCP registration failed. You can configure it manually later (see CLAUDE.md)."
+            }
+        } else {
+            Write-Warning "  Missing credentials. Skipping Zotero setup. You can configure it later (see CLAUDE.md)."
+        }
+    }
+} else {
+    Write-Host "  Skipped. You can configure Zotero later (see CLAUDE.md)." -ForegroundColor Gray
+}
+
+# Step 6: Open VS Code
+Write-Host "`n[6/7] Opening VS Code..." -ForegroundColor Yellow
 & code .
 Pop-Location
 
