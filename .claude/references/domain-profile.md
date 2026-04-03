@@ -117,6 +117,13 @@ Generated via /discover interview or filled manually.
 | Imai, King, Nall (2009) | Randomization inference for causal effects |
 | Blair & Imai (2012) | List experiments — statistical methods for sensitive questions |
 | Aronow & Miller (2019) | Foundations of Agnostic Statistics — design-based inference |
+| Taber & Lodge (2006) | Motivated skepticism — prior attitudes filter political information |
+| Druckman (2001) | Framing effects in political opinion — how alternative frames shift preferences |
+| Gelpi, Feaver & Reifler (2009) | Paying the Human Costs of War — casualty sensitivity and war support |
+| Chong & Druckman (2007) | Framing theory — competing frames and opinion formation |
+| Kahneman & Tversky (1979) | Prospect theory — loss aversion framework (theoretical anchor for H3) |
+| Haidt (2001) | Moral foundations — intuitive vs. reasoned moral judgment |
+| Zaller (1992) | The Nature and Origins of Mass Opinion — elite cue reception model |
 
 ---
 
