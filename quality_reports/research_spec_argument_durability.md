@@ -111,32 +111,35 @@ These competing predictions have never been tested against each other in the con
 
 ## Expected Results
 
-1. Hybrid arguments will show *greater* support decline after partial disconfirmation than pure arguments of the surviving type (H1, H2 confirmed — fragility effect)
-2. The effect will be asymmetric: losing a justification will reduce support more than gaining a justification increases it (H3 confirmed — loss > gain)
-3. These patterns will replicate across policy domains (H4 confirmed — generality)
-4. Perceived credibility of the surviving argument will mediate the fragility effect (H5 — credibility cascade mechanism)
-5. The surprising alternative — hybrid resilience/gestalt effect — is possible and would be equally publishable
+This paper is framed as adjudicating between three theoretically derived competing predictions. All outcomes are pre-registered and theoretically informative:
+
+1. **If H1a (fragility):** Hybrid arguments show *greater* support decline than pure arguments after matched disconfirmation. The credibility cascade mechanism (H5a) mediates: disconfirmation of one leg reduces perceived credibility of the surviving leg. This would extend the averaging/dilution tradition into post-formation durability.
+2. **If H1b (resilience):** Hybrid arguments show *smaller* support decline than pure arguments. The anchoring/compensation mechanism (H5b) mediates: the surviving leg takes on compensatory weight. This would extend the belief perseverance tradition to compound argument structures.
+3. **If H1c (additivity):** Hybrid arguments decline proportionally — no interaction between justification types. This would suggest the public is more rational about compound arguments than either the perseverance or averaging literatures predict.
+4. **H2 (loss > gain asymmetry):** Regardless of which H1 variant holds, losing a justification reduces support more than gaining one increases it. This is a directional prediction derived from prospect theory.
+5. **H3 (cross-domain generality):** The pattern replicates across war, trade, climate, and immigration domains.
 
 ## Contribution
 
-This paper introduces the concept of **argument structure durability** — the idea that the *combination* of justifications has emergent properties that differ from the individual justifications considered separately. This is distinct from:
+This paper introduces the concept of **argument structure durability** — the idea that the *combination* of justifications supporting a political position has emergent properties that differ from the individual justifications considered separately. Three established literatures make competing predictions about these properties, but none has tested them:
 
-- **Framing effects** (Druckman): which study how *alternative* frames shift opinion, not how *stacked* frames interact under stress
-- **Motivated reasoning** (Taber & Lodge): which studies how prior attitudes filter information, not how justification structure moderates disconfirmation
-- **Casualty sensitivity / war support** (Gelpi, Feaver & Reifler): which is domain-specific; this paper makes a domain-general claim
-- **Moral foundations theory** (Haidt): which categorizes moral reasoning types but does not test their structural durability in political argument
+- **Belief perseverance** (Anderson, Lepper & Ross 1980): predicts resilience, but has only tested single beliefs with fabricated evidence — not compound political arguments with real-world disconfirmation
+- **Averaging/dilution** (Obermaier & Koch 2024; Weaver et al. 2012): predicts fragility, but studies initial persuasion — not post-formation durability under disconfirmation
+- **Framing effects** (Chong & Druckman 2007): studies *competing* frames — not *reinforcing* frames under stress
+- **Belief network models** (Dalege et al. 2016): provide theoretical scaffolding for how attitudes with multiple bases might respond to partial disconfirmation, but the specific competing-predictions test has not been conducted
+- **Motivated reasoning** (Taber & Lodge 2006): studies how prior attitudes filter information — not how justification *structure* moderates disconfirmation responses
 
-The paper's scope is deliberately broad: this is a claim about how humans process political arguments, tested across multiple domains, not a paper about any one policy area.
+The paper bridges four literatures that have developed in isolation (perseverance, averaging, framing, belief networks) by asking a question none has posed: when a political position rests on both normative and practical justifications, does the compound structure create fragility, resilience, or additivity when one justification is disconfirmed?
 
-**Key literature gap to confirm:** The Librarian must conduct a thorough search for existing work on hybrid/multi-justification argument durability, argument structure under disconfirmation, and related constructs. The author suspects this specific framing is novel but considers it unlikely that no one has explored adjacent territory. Confirming or qualifying novelty is a high-priority task for the literature review.
+**Literature gap confirmed:** Three passes of targeted literature search (55 papers across political science, social psychology, communication, moral psychology, behavioral economics, consumer behavior, and philosophy) confirm that this specific three-way test is novel. The Chan et al. (2017) perseverance meta-analysis confirms that structural complexity has not been tested as a moderator. See `quality_reports/literature/argument-durability/positioning.md` for full novelty assessment.
 
 ## Open Questions
 
 1. **Power analysis:** How many respondents per cell? Depends on expected effect size — needs piloting or calibration from adjacent literature.
 2. **Number of scenarios:** Minimum 3 domains confirmed; 4th (immigration) contingent on viable scenario construction. Need to pilot-test scenario equivalence.
 3. **Disconfirmation strength calibration:** How strong should the disconfirmation event be? Too weak = null results; too strong = floor effects. Requires pre-testing.
-4. **Mechanism measurement:** How best to measure the credibility cascade? Direct questions about remaining argument strength? Implicit measures?
+4. **Mechanism measurement:** How best to measure both the credibility cascade (H5a) and anchoring/compensation (H5b)? Direct questions about remaining argument strength, perceived credibility of surviving leg, and importance ratings.
 5. **Observational case selection:** Which historical cases have the cleanest separation between normative and practical disconfirmation events, with sufficient polling data?
 6. **Scope of "political":** Should we include non-political hybrid arguments as a benchmark (e.g., health decisions with moral and practical justifications)?
 7. **Pre-existing attitudes:** How to handle respondents who already have strong opinions on the policy topics used in vignettes? Likely a moderator, not an exclusion criterion.
-8. **Novelty confirmation:** Priority task for librarian — thorough search for existing work on this specific question.
+8. **Bayesian benchmark:** The rational updating prediction (H1c) needs a formal operationalization — how do we define "proportional decline" to test against?

@@ -1,6 +1,6 @@
 # Positioning Statement: Argument Durability Under Partial Disconfirmation
 
-**Date:** 2026-04-03 (Revised: 2026-04-03, second pass)
+**Date:** 2026-04-03 (Revised: 2026-04-03, second pass; Third-pass novelty confirmation: 2026-04-03)
 
 ---
 
@@ -16,6 +16,18 @@ After extensive cross-disciplinary search (political science, social psychology,
 2. Proposes or tests a "credibility cascade" mechanism from one disconfirmed justification to a surviving one
 3. Applies loss aversion to the gain/loss of individual justifications within compound arguments
 4. Compares hybrid vs. pure argument durability experimentally
+
+### Third-Pass Novelty Confirmation (2026-04-03)
+
+A targeted search across five specific vectors confirmed that the three-way competing predictions framing (perseverance vs. averaging/dilution vs. rational updating) is novel. Specifically:
+
+1. **No paper tests whether belief structural complexity moderates the perseverance effect.** The Anderson et al. (1980) forward citation chain does not include any study that manipulates the number or type of supporting reasons as a moderator.
+2. **No meta-analysis identifies "number of supporting reasons" or "structural complexity" as a moderator** of perseverance or correction effectiveness. Chan et al. (2017, k = 52, N = 6,878) tested explanation generation, counterarguing, and message detail -- but not belief structure.
+3. **No paper in the Chong & Druckman or Nyhan & Reifler citation chains** addresses reinforcing (complementary) frames under disconfirmation.
+4. **No paper applies loss aversion to the gain/loss of justifications within compound arguments.** Alesina & Passarelli (2019, AJPS) apply loss aversion to policy change preferences; Osmundsen & Petersen (2020, Political Psychology) apply it to risk framing in political settings. Neither addresses argument structure.
+5. **The belief network literature** (Dalege et al. 2016 CAN model; Brandt & Sleegers 2021) provides theoretical infrastructure for understanding how disconfirmation might propagate through interconnected attitude elements, but has not been applied to the specific paradigm of compound justification durability.
+
+**The novelty assessment from the second pass stands and is strengthened by the third pass.**
 
 ### The Belief Perseverance Challenge
 
@@ -72,6 +84,8 @@ The proposed project is NOT simply a replication of belief perseverance with com
 
 8. **Fabrigar & Petty (1999)** -- Matched attacks on attitude bases. Extends to asking: what happens when an attitude has DUAL bases and one is attacked?
 
+9. **Dalege et al. (2016)** -- The Causal Attitude Network model provides theoretical infrastructure: attitudes as networks of connected evaluative reactions, where central nodes have outsized influence. Predicts that what happens when one node is disconfirmed depends on its connectivity to other nodes. Has not been tested with compound justification paradigms. (Added third pass.)
+
 ### How Does This Paper Differ?
 
 | Dimension | Existing Literature | This Paper |
@@ -81,8 +95,8 @@ The proposed project is NOT simply a replication of belief perseverance with com
 | **Argument manipulation** | Adding arguments (averaging) or discrediting single beliefs (perseverance) | Selectively disconfirming one component of a compound structure |
 | **Mechanism** | Averaging, dilution, explanation-generation, continued influence | Credibility cascade (new): disconfirmation of one undermines the other |
 | **Domain** | Usually single domain | Cross-domain generality claim |
-| **Loss aversion** | Applied to money, possessions, beliefs-as-objects | Applied to justifications-within-arguments |
-| **Competing predictions** | Each literature makes a one-directional prediction | Design explicitly tests fragility vs. resilience |
+| **Loss aversion** | Applied to money, possessions, policy preferences (Alesina & Passarelli 2019) | Applied to justifications-within-arguments |
+| **Competing predictions** | Each literature makes a one-directional prediction | Design explicitly tests fragility vs. resilience vs. additivity |
 
 ---
 
@@ -127,11 +141,14 @@ Obermaier & Koch show that weak arguments dilute strong arguments at the point o
 ### "How does the just war framework inform the war domain scenarios?"
 The normative/practical distinction in our experimental design maps directly onto just war theory's jus ad bellum categories (Walzer 1977; McMahan 2009). "Just cause" and moral obligation are normative justifications; "reasonable chance of success" and proportionality are consequentialist/practical ones. Sagan & Valentino (2020) show that the American public applies moral reasoning to war evaluation in ways that track these categories. Our war scenarios thus have construct validity grounded in a well-established philosophical and empirical tradition.
 
+### "How does this relate to attitude network models (Dalege et al. 2016)?" (Added third pass)
+The Causal Attitude Network (CAN) model conceptualizes attitudes as networks of causally connected evaluative reactions. It predicts that central nodes have outsized influence on overall attitudes. Our study can be understood as testing a specific prediction of this framework: when one "node" (justification) in a compound attitude network is disconfirmed, does the disruption propagate to other connected nodes (fragility), or does the remaining node sustain the network (resilience)? We provide the first behavioral test of this structural question in the context of political attitudes, whereas the CAN model has been tested primarily with correlational data on attitude-behavior consistency.
+
 ---
 
 ## Scooping Risk Assessment
 
-**Risk level: LOW to MODERATE** (upgraded from LOW due to active adjacent literatures)
+**Risk level: LOW to MODERATE** (upgraded from LOW due to active adjacent literatures; confirmed third pass)
 
 - No working paper found on SSRN, Google Scholar, or institutional working paper series that directly tests hybrid argument durability under disconfirmation
 - The closest papers (Obermaier & Koch 2024, Bergman et al. 2025) study argument quantity effects on initial persuasion, not post-formation durability
@@ -139,10 +156,12 @@ The normative/practical distinction in our experimental design maps directly ont
 - The war justification literature (Gelpi et al., Tomz & Weeks) has not moved into argument structure territory
 - The framing literature (Chong & Druckman) has not addressed reinforcing frames
 - No working papers found in Harvard Kennedy School, Stanford CISAC, Princeton Niehaus, or EGAP series targeting this specific question
+- The belief network literature (Dalege et al. 2016; Brandt & Sleegers 2021) provides theoretical tools that COULD be applied to this question but has not been (third pass confirmation)
 
 **Elevated risk factors:**
 - The argument quality/quantity literature in social psychology is active (Bergman et al. 2025 published very recently). Someone could be working on a closely adjacent question.
 - The misinformation/correction literature is booming and researchers are exploring increasingly structural questions about belief systems.
+- The belief network modeling community (Dalege, Brandt, Sleegers) is developing increasingly specific predictions about how attitude change propagates through interconnected beliefs. An empirical test of node-removal in compound attitudes is a natural next step someone in this community might take.
 - Speed to pre-registration is advisable.
 
 ---
