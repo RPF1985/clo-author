@@ -40,17 +40,14 @@ If you use [Zotero](https://www.zotero.org/) to manage your research library, yo
 1. Install: `pip install "zotero-mcp-server[all]"`
 2. Get your API key from https://www.zotero.org/settings/keys and your library ID
 3. In Zotero desktop: Preferences → Advanced → enable "Allow other applications on this computer to communicate with Zotero"
-4. Register with Claude Code (hybrid mode — local reads, web API writes):
+4. Register with Claude Code (use `--scope user` for all projects, or `--scope project` for one project):
    ```bash
-   claude mcp add --transport stdio --scope project \
-     --env ZOTERO_LOCAL=true \
-     --env ZOTERO_API_KEY=<your-key> \
-     --env ZOTERO_LIBRARY_ID=<your-id> \
-     zotero -- cmd /c zotero-mcp serve
+   claude mcp add -t stdio -s user zotero -e ZOTERO_LOCAL=true -e ZOTERO_API_KEY=<your-key> -e ZOTERO_LIBRARY_ID=<your-id> -- zotero-mcp serve
    ```
+   **Note:** On Windows, if `zotero-mcp` isn't on PATH, use the full executable path (e.g., `"C:\...\Scripts\zotero-mcp.exe" serve`).
 5. (Optional) Build semantic search index: `zotero-mcp update-db --fulltext`
 
-**Note:** `.mcp.json` is gitignored — your API key stays local. If you provision projects with `/create-repo`, the setup script will prompt for Zotero credentials automatically.
+**Note:** User-scope config is stored in `~/.claude.json`; project-scope in `.mcp.json` (gitignored). Either way, your API key stays local. If you provision projects with `/create-repo`, the setup script will prompt for Zotero credentials automatically.
 
 ---
 
