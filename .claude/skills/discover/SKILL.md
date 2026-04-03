@@ -68,7 +68,8 @@ Workflow:
 1. Read `.claude/references/domain-profile.md` for field journals and seminal references
 2. Search user's Zotero library for existing papers on the topic (via Zotero MCP tools, if configured — skip silently if not available)
 3. Check `master_supporting_docs/` for uploaded papers
-4. Read `bibliography_base.bib` for papers already in the project; cross-reference with Zotero to avoid duplicates
+4. Check `data/paper_cache/` for previously cached papers — these survive across sessions and context compression
+5. Read `bibliography_base.bib` for papers already in the project; cross-reference with Zotero to avoid duplicates
 5. Dispatch Librarian to search:
    - Top-3 PS generals (APSR, AJPS, JOP)
    - Field journals from domain-profile.md
@@ -84,6 +85,7 @@ Workflow:
 8. If gaps found, re-dispatch Librarian for targeted search (max 1 round)
 9. Save to `quality_reports/lit_review_[topic].md`
 10. Add newly discovered papers to Zotero via `zotero_add_by_doi` (after dedup check) for papers with DOIs — if Zotero MCP is configured
+11. Cache all newly read paper text to both global and project caches per `.claude/rules/paper-cache.md`
 
 **Unverified citations:** If you cannot verify a citation, mark the BibTeX entry with `% UNVERIFIED`. Do NOT fabricate or guess citation details. Note when working papers have been published — cite the published version.
 

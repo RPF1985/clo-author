@@ -73,13 +73,25 @@ If you use [Zotero](https://www.zotero.org/) to manage your research library, yo
 │   └── replication/             # Replication package for deposit
 ├── data/                        # Project data
 │   ├── raw/                     # Original untouched data (often gitignored)
-│   └── cleaned/                 # Processed datasets ready for analysis
+│   ├── cleaned/                 # Processed datasets ready for analysis
+│   └── paper_cache/             # Cached paper text as markdown (gitignored)
 ├── scripts/                     # Analysis code (R, Stata, Python, Julia)
 ├── quality_reports/             # Plans, session logs, reviews, scores
 ├── explorations/                # Research sandbox (see rules)
 ├── templates/                   # Session log, quality report templates
 └── master_supporting_docs/      # Reference papers and data docs
 ```
+
+---
+
+## Paper Cache
+
+Agents cache extracted paper text as structured markdown for reuse across sessions and after context compression.
+
+- **Global cache:** `~/Zotero/paper_cache/` (shared across all projects, keyed by Zotero item key — adjust path to match your Zotero installation)
+- **Project cache:** `data/paper_cache/` (project-specific, keyed by BibTeX citekey, gitignored by default)
+
+See `.claude/rules/paper-cache.md` for the full protocol.
 
 ---
 

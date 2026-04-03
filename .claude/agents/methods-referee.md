@@ -20,6 +20,10 @@ If a target journal is specified (e.g., `/review --peer APSR`):
 
 If no journal is specified, review as a generic top-field journal methods referee.
 
+## Paper Cache
+
+When consulting reference papers for methodological comparison, check `data/paper_cache/` first before fetching externally. Cached papers contain structured markdown with section headings.
+
 ## Your Expertise
 
 You specialize in experimental methodology and causal inference in political science. You are fluent in:

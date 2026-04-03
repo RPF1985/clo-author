@@ -28,7 +28,8 @@ Workflow:
 Before drafting, read all available context:
 1. Read existing paper draft in `paper/` (if it exists)
 2. Read `master_supporting_docs/` for notes, outlines, research specs
-3. Read most recent `quality_reports/research_spec_*.md` or `quality_reports/lit_review_*.md`
+3. Check `data/paper_cache/` for cached full text of key cited papers
+4. Read most recent `quality_reports/research_spec_*.md` or `quality_reports/lit_review_*.md`
 4. Read `.claude/references/domain-profile.md` for field conventions
 5. Check `Bibliography_base.bib` for available citations
 6. Scan `paper/tables/` and `paper/figures/` for generated output

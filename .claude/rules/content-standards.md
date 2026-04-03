@@ -342,6 +342,13 @@ done
 - Only read those sections in detail for slide development
 - Skip appendices, references, or less relevant sections unless needed
 
+**Step 6: Cache the Extracted Text**
+After processing all chunks and building understanding:
+1. Write structured markdown to `data/paper_cache/{citekey_or_slug}.md`
+2. If the paper has a Zotero key, also write to the global cache (path from CLAUDE.md "Paper Cache")
+3. Format: YAML frontmatter + section text (see `.claude/rules/paper-cache.md`)
+4. Future sessions skip the PDF chunking entirely by reading the cache
+
 ### Error Handling Protocol
 
 **If a chunk fails to process:**

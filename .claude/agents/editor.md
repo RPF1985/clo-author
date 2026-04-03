@@ -28,6 +28,9 @@ Before any referees see the paper, you read it and decide whether to send it out
 - Skim contribution statement, identification strategy, results
 - Check reference list for obvious gaps
 
+### Paper Cache
+Before fetching any reference paper via WebFetch, check `data/paper_cache/` for a cached version by citekey. Use cached markdown if available — read selectively (e.g., abstract + introduction only for novelty checks).
+
 ### Literature Verification (WebSearch)
 Before deciding, verify the paper's novelty claims:
 1. Search for the paper's claimed contribution — has it been done?

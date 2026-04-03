@@ -8,7 +8,18 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:scholar.google.com)",
       "WebFetch(domain:api.semanticscholar.org)",
-      "WebFetch(domain:api.openalex.org)"
+      "WebFetch(domain:api.openalex.org)",
+
+      "_comment_zotero": "Zotero MCP tools — prefix assumes server registered as 'zotero' via claude mcp add. Verify with: claude mcp list",
+      "mcp__zotero__zotero_search_items(*)",
+      "mcp__zotero__zotero_semantic_search(*)",
+      "mcp__zotero__zotero_get_item_metadata(*)",
+      "mcp__zotero__zotero_get_item_fulltext(*)",
+      "mcp__zotero__zotero_get_annotations(*)",
+      "mcp__zotero__zotero_add_by_doi(*)",
+
+      "_comment_cache": "Allow writing cached paper markdown to global Zotero-adjacent cache. Adjust path if your Zotero is installed elsewhere.",
+      "Write(~/Zotero/paper_cache/*)"
     ],
     "deny": [
       "Read(~/.ssh/*)",

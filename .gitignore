@@ -62,6 +62,9 @@ Thumbs.db
 # Quarto rendering artifacts
 /.quarto/
 
+# Paper cache (extracted markdown from PDFs — regenerable)
+data/paper_cache/
+
 # Output artifacts — uncomment lines below based on your preference
 # *.rds
 # output/**/*.rds

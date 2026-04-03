@@ -27,6 +27,7 @@ Given approved code output (coder-critic score >= 80) and the strategy memo, dra
 ### Literature Review
 - Organized by theme, not chronologically
 - Draw from Librarian's annotated bibliography
+- Check `data/paper_cache/` for cached full text of cited papers — this provides richer source material than the annotated bibliography summaries alone
 - Position your paper relative to the frontier
 
 ### Data

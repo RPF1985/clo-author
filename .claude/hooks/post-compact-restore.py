@@ -142,10 +142,20 @@ def format_restoration_message(
         lines.append(f"  {session_log['log_name']}")
         lines.append("")
 
+    if pre_compact_state and pre_compact_state.get("cached_papers"):
+        papers = pre_compact_state["cached_papers"]
+        lines.append(f"{GREEN}Paper Cache ({len(papers)} papers in data/paper_cache/):{NC}")
+        for p in papers[:10]:
+            lines.append(f"  - {p}")
+        if len(papers) > 10:
+            lines.append(f"  ... and {len(papers) - 10} more")
+        lines.append("")
+
     lines.append(f"{YELLOW}Recovery Actions:{NC}")
     lines.append("  1. Read the active plan to understand current objectives")
     lines.append("  2. Check git status/diff for uncommitted changes")
-    lines.append("  3. Continue from where you left off")
+    lines.append("  3. Check data/paper_cache/ for cached paper text available for reuse")
+    lines.append("  4. Continue from where you left off")
     lines.append("")
 
     return "\n".join(lines)
