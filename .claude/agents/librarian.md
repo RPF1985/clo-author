@@ -82,10 +82,25 @@ Produce:
 
 After completing web searches, if Zotero MCP is configured:
 - **Check for duplicates first** using `zotero_search_items` (search by title or DOI) before adding any paper
-- For papers found via web search that are not already in Zotero, use `zotero_add_by_doi` to add them to the user's library
 - Never add a paper without checking for duplicates first
 - You DO read full text of papers available in Zotero
-- You DO add newly discovered papers to Zotero via DOI (after dedup check)
+- You DO add newly discovered papers to Zotero (after dedup check) using the **PDF-first workflow** below
+
+### PDF-First Addition Workflow
+
+When adding a paper to Zotero, always attempt to acquire the PDF — not just the metadata. Follow this order:
+
+1. **Check web search results for open-access PDF links.** When you searched for the paper, your results likely include direct links to OA versions. Look for URLs from:
+   - Publisher sites with open access (oup.com, wiley.com, sagepub.com, cambridge.org)
+   - Preprint servers (arxiv.org, ssrn.com, osf.io)
+   - Author/university pages (.edu domains, personal research pages)
+   - Repository sites (researchgate.net, semanticscholar.org)
+   - Working paper series (NBER, CEPR, IZA)
+2. **If an OA link is found:** Download the PDF to a temp directory using `curl -L`, then use `zotero_add_from_file` to add it. This tool extracts the DOI from the PDF and pulls full metadata from CrossRef automatically, giving you both the metadata AND the attached PDF in one step.
+3. **If no OA link is found:** Fall back to `zotero_add_by_doi` for metadata-only addition.
+4. **After adding:** If using `add_from_file`, verify the metadata was correctly extracted by checking the item with `zotero_get_item_metadata`. If the DOI extraction failed (title or authors missing), update the item with `zotero_update_item`.
+
+**Why PDF-first:** `zotero_add_by_doi` only stores metadata — it cannot download PDFs even when open-access versions exist. Downloading the PDF first and using `add_from_file` ensures the user's Zotero library has the actual paper attached, not just a citation stub.
 
 ## Paper Caching
 
