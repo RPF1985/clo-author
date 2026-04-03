@@ -122,11 +122,11 @@ if ($configZotero -eq 'y') {
 
         if ($apiKeyPlain -and $libraryId) {
             Write-Host "  Registering Zotero MCP server..." -ForegroundColor Gray
-            & claude mcp add --transport stdio --scope project `
-                --env "ZOTERO_LOCAL=true" `
-                --env "ZOTERO_API_KEY=$apiKeyPlain" `
-                --env "ZOTERO_LIBRARY_ID=$libraryId" `
-                zotero -- cmd /c zotero-mcp serve
+            & claude mcp add -t stdio -s project zotero `
+                -e "ZOTERO_LOCAL=true" `
+                -e "ZOTERO_API_KEY=$apiKeyPlain" `
+                -e "ZOTERO_LIBRARY_ID=$libraryId" `
+                -- zotero-mcp serve
 
             if ($LASTEXITCODE -eq 0) {
                 Write-Host "  Zotero integration configured successfully." -ForegroundColor Green

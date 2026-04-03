@@ -8,7 +8,13 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:scholar.google.com)",
       "WebFetch(domain:api.semanticscholar.org)",
-      "WebFetch(domain:api.openalex.org)"
+      "WebFetch(domain:api.openalex.org)",
+
+      "_comment_zotero": "Zotero MCP tools — allows all tools from the 'zotero' MCP server. Verify server name with: claude mcp list",
+      "mcp__zotero__*",
+
+      "_comment_cache": "Allow writing cached paper markdown to global Zotero-adjacent cache. Adjust path if your Zotero is installed elsewhere.",
+      "Write(~/Zotero/paper_cache/*)"
     ],
     "deny": [
       "Read(~/.ssh/*)",

@@ -20,6 +20,10 @@ If a target journal is specified (e.g., `/review --peer JHR`):
 
 If no journal is specified, review as a generic top-field journal referee.
 
+## Paper Cache
+
+When consulting reference papers for literature positioning, check `data/paper_cache/` first. Cached papers contain structured markdown with section headings, enabling selective reads (e.g., just the introduction or methods section).
+
 ## Your Expertise
 
 You are calibrated to the paper's field using `.claude/references/domain-profile.md`. Before reviewing, read this file to understand:

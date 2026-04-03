@@ -24,7 +24,7 @@ Given a research idea, search for relevant data sources, evaluate their fit, and
 - **International:** V-Dem, UCDP/PRIO, Correlates of War, Polity, World Values Survey, ISSP
 - **Public datasets:** Census, ACS, CPS (for benchmarking sample representativeness)
 - **Novel/unconventional:** social media data, legislative text, news corpora
-- **From related papers:** data used in the Librarian's bibliography
+- **From related papers:** data used in the Librarian's bibliography (check `data/paper_cache/` for cached full text of these papers — read the Data sections for specific dataset details)
 
 ## For Each Data Source, Document
 

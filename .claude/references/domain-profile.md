@@ -121,9 +121,11 @@ Generated via /discover interview or filled manually.
 | Druckman (2001) | Framing effects in political opinion — how alternative frames shift preferences |
 | Gelpi, Feaver & Reifler (2009) | Paying the Human Costs of War — casualty sensitivity and war support |
 | Chong & Druckman (2007) | Framing theory — competing frames and opinion formation |
-| Kahneman & Tversky (1979) | Prospect theory — loss aversion framework (theoretical anchor for H3) |
+| Kahneman & Tversky (1979) | Prospect theory — loss aversion framework (theoretical anchor for H2) |
 | Haidt (2001) | Moral foundations — intuitive vs. reasoned moral judgment |
 | Zaller (1992) | The Nature and Origins of Mass Opinion — elite cue reception model |
+| Ross, Lepper & Hubbard (1975) | Belief perseverance — foundational paper on persistence after disconfirmation |
+| Anderson, Lepper & Ross (1980) | Explanation-generation sustains beliefs after evidence is discredited |
 
 ---
 

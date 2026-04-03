@@ -192,13 +192,21 @@ def main() -> int:
     plan_info = find_active_plan(project_dir)
     decisions = extract_recent_decisions(project_dir)
 
+    # Inventory cached papers for context recovery
+    paper_cache_dir = Path(project_dir) / "data" / "paper_cache"
+    cached_papers = []
+    if paper_cache_dir.exists():
+        for md_file in sorted(paper_cache_dir.glob("*.md"))[:50]:
+            cached_papers.append(md_file.stem)
+
     # Build state object
     state = {
         "trigger": trigger,
         "plan_path": plan_info["plan_path"] if plan_info else None,
         "plan_status": plan_info["status"] if plan_info else None,
         "current_task": plan_info.get("current_task") if plan_info else None,
-        "decisions": decisions
+        "decisions": decisions,
+        "cached_papers": cached_papers
     }
 
     # Save state for restoration
