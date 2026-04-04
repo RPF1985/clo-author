@@ -39,7 +39,8 @@ Dispatch in parallel:
 1. **strategist-critic** — causal design audit (4 phases)
 2. **writer-critic** — manuscript polish (6 categories)
 3. **Verifier** — compilation check
-Compute weighted aggregate score.
+4. **experimental-methods-reviewer** — textbook-grounded design evaluation (only if the paper's design is experimental; advisory, non-blocking). Uses DeclareDesign and Gerber & Green quick references.
+Compute weighted aggregate score (experimental-methods-reviewer score is advisory, not included in the weighted gate).
 
 ### Full Peer Review (`--peer [journal]`)
 

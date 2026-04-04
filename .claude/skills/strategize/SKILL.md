@@ -36,8 +36,9 @@ Workflow:
    - Phase 3: Inference soundness (clustering, multiple testing)
    - Phase 4: Polish and completeness (robustness, citations)
 5. If CRITICAL issues found, iterate (max 3 rounds per three-strikes)
-6. Save memo to `quality_reports/strategy_memo_[topic].md`
-7. Save review to `quality_reports/strategy_memo_[topic]_review.md`
+6. If the design is experimental (between-subjects, factorial, conjoint, list, endorsement, within-subjects, or any design with random assignment), dispatch the **experimental-methods-reviewer** for an advisory (non-blocking) review grounded in both the DeclareDesign textbook and Gerber & Green. Save to `quality_reports/strategy/[project-name]/experimental_methods_review.md`.
+7. Save memo to `quality_reports/strategy_memo_[topic].md`
+8. Save review to `quality_reports/strategy_memo_[topic]_review.md`
 
 ### `/strategize pap [spec]` — Pre-Analysis Plan
 Draft a pre-analysis plan following AEA/OSF/EGAP standards.

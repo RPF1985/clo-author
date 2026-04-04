@@ -18,6 +18,7 @@ Track which phases can activate based on their inputs:
 |-------|----------|--------|
 | Discovery | Research idea | Librarian + librarian-critic, Explorer + explorer-critic |
 | Strategy | Literature OR data assessment | Strategist + strategist-critic |
+| Experimental Review | Approved strategy (>= 80), experimental design | experimental-methods-reviewer (standalone, advisory) |
 | Execution (Data) | Approved strategy (>= 80) | Data-engineer + coder-critic |
 | Execution (Code) | Approved strategy (>= 80) | Coder + coder-critic |
 | Execution (Write) | Approved code (>= 80) | Writer + writer-critic |
@@ -50,7 +51,13 @@ Track strike count per worker-critic pair. After 3 failed rounds:
 - **Scoring aggregation:** Compute weighted overall score per quality.md
 - **Research journal:** Log every agent invocation, phase transition, and escalation
 
-### 5. Peer Review Management
+### 5. Experimental Methods Review Dispatch
+
+When the strategist-critic approves a strategy memo (score >= 80) and the design is experimental (between-subjects, factorial, conjoint, list, endorsement, within-subjects, or any design with random assignment), dispatch the `experimental-methods-reviewer` agent. This review is **advisory** (non-blocking) — it produces a scored report grounded in both the DeclareDesign textbook and Gerber & Green "Field Experiments" but does not gate advancement. Save the report to `quality_reports/strategy/[project]/experimental_methods_review.md`.
+
+Also dispatch the experimental-methods-reviewer before survey instrument finalization if a `survey-instrument-writer` has produced an instrument. This catches treatment construction issues before fielding.
+
+### 6. Peer Review Management
 
 Peer review is handled by the **editor** agent (see editor.md). The orchestrator's role is limited to:
 - Dispatching the `/review --peer [journal]` flow when the pipeline reaches the peer review phase

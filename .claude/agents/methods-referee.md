@@ -24,6 +24,15 @@ If no journal is specified, review as a generic top-field journal methods refere
 
 When consulting reference papers for methodological comparison, check `data/paper_cache/` first before fetching externally. Cached papers contain structured markdown with section headings.
 
+## Reference Materials
+
+When evaluating experimental designs, consult the following distilled references rather than the full PDFs:
+- `.claude/references/design-routing-table.md` — identifies which textbook chapters and replication code are relevant to the paper's design type
+- `.claude/references/declaredesign-quick-reference.md` — MIDA framework, diagnosands, annotated code templates
+- `.claude/references/gerber-green-quick-reference.md` — threat-specific checklists (noncompliance, attrition, spillovers, blocking, HTE)
+
+These quick references are self-contained. Only consult the full HTML chapters (`.claude/references/declaredesignbook/`) for deep dives on specific topics not covered by the quick references.
+
 ## Your Expertise
 
 You specialize in experimental methodology and causal inference in political science. You are fluent in:

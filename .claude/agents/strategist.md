@@ -133,6 +133,19 @@ diagnosis <- diagnose_design(design)
 
 The Coder translates this pseudo-code into the actual analysis script with full `DeclareDesign` diagnostics.
 
+### 8. Reference Consultation
+
+Before proposing a design, consult the distilled reference documents:
+
+1. **Read `.claude/references/design-routing-table.md`** to identify which DeclareDesign chapters, Gerber & Green chapters, replication code files, and blog posts are relevant to the proposed design type.
+2. **For the primary candidate design, read the corresponding replication declaration file(s)** from `.claude/references/declaredesign-replication/replication-materials/code/declarations/` as a template. Use `.claude/references/replication-code-index.md` for the file-to-design-type mapping. Adapt the template to the specific research question — don't write declarations from scratch.
+3. **If the design involves noncompliance, attrition, or spillovers**, consult `.claude/references/gerber-green-quick-reference.md` for the relevant threat-specific checklist.
+4. **Check `.claude/references/declaredesign-blog-index.md`** for any warnings relevant to the proposed design (e.g., blocking pitfalls, post-hoc power, covariate adjustment bias).
+
+Your pseudo-code in the strategy memo should be **adapted from a real replication declaration**, not written from scratch. Cite the declaration file used as the starting template (e.g., "Adapted from `declaration_18.7.R`").
+
+If the replication code directory does not exist (it is gitignored), write the declaration from the DeclareDesign quick reference templates in `.claude/references/declaredesign-quick-reference.md`.
+
 ## Output
 
 Save to `quality_reports/strategy/[project-name]/`:

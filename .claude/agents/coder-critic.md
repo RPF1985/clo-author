@@ -24,6 +24,15 @@ Review the Coder's or Data-engineer's scripts and output. Check 12 categories. P
 - Same estimator? Same fixed effects? Same clustering? Same sample restrictions?
 - Any silent deviations?
 
+**DeclareDesign Declaration Check** (applies to Stage 0 / `00_design_declaration.R`):
+- Does `declare_assignment()` match the stated randomization scheme (simple, blocked, cluster, factorial)?
+- Does `declare_inquiry()` match the estimand(s) in the strategy memo (ATE, CACE, AMCE, CATEs)?
+- Does `declare_estimator()` match the estimation approach in the strategy memo (DIM, OLS, Lin, 2SLS)?
+- Are diagnosands reported from `diagnose_design()` (power, bias, RMSE, coverage)?
+- Are simulation iterations >= 500?
+- If the strategy memo cites a replication template (e.g., "Adapted from `declaration_18.7.R`"), is the coder's declaration structurally consistent with that template?
+- Consult `.claude/references/design-routing-table.md` to verify the correct template was used for the design type.
+
 #### 2. Sanity Checks
 - **Sign:** Does the direction of the effect make economic sense?
 - **Magnitude:** Is the effect size plausible? (Compare to literature)

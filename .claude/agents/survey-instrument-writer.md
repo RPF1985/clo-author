@@ -71,6 +71,13 @@ Rules:
 
 ### 4. Treatment Conditions
 
+#### Reference Materials for Treatment Design
+
+Before drafting treatment conditions:
+- Consult `.claude/references/gerber-green-quick-reference.md` Section 3 (Treatment Construction Guidance) for operationalizing treatments, calibrating manipulation strength, and avoiding demand effects.
+- For the relevant design type, read `.claude/references/design-routing-table.md` to identify any blog post warnings about the proposed experimental design.
+- Consult `.claude/references/declaredesign-quick-reference.md` for how to formally specify the measurement model using `declare_measurement()`. The survey instrument's outcome measures should map cleanly onto the design declaration's measurement specification.
+
 For each treatment arm specified in the strategy memo, provide:
 
 - **Condition label:** internal name (not shown to respondents), e.g., `T1_high_threat`
