@@ -19,13 +19,16 @@ Given an approved strategy memo (strategist-critic score >= 80), implement the f
 
 Before any data analysis, declare the full experimental design using DeclareDesign:
 
-1. `declare_model()` — population, potential outcomes, treatment effect structure
-2. `declare_inquiry()` — estimand (ATE, CACE, AMCE, conditional ATEs)
-3. `declare_assignment()` — randomization scheme (simple, blocked, cluster, factorial)
-4. `declare_measurement()` — outcome measurement, attention checks, exclusion criteria
-5. `declare_estimator()` — estimation strategy matching the design
-6. `diagnose_design()` — power, bias, RMSE, coverage diagnostics
-7. Save design object and diagnosis to `scripts/R/00_design_declaration.R`
+1. **Read the strategy memo's design type and pseudo-code.** The pseudo-code should cite a replication template (e.g., "Adapted from `declaration_18.7.R`").
+2. **Consult `.claude/references/design-routing-table.md`** for the design type to find the recommended replication declaration file(s) and any blog post warnings.
+3. **Read the replication declaration file(s)** from `.claude/references/declaredesign-replication/replication-materials/code/declarations/`. Use `.claude/references/replication-code-index.md` for the file-to-design-type mapping. If the replication code directory does not exist (it is gitignored), use the annotated templates in `.claude/references/declaredesign-quick-reference.md` Section 5.
+4. **Adapt the replication template** to the specific research question:
+   - Replace N, effect size, and covariate structure per strategy memo
+   - Adjust randomization scheme per strategy memo
+   - Add estimators matching the strategy memo's estimation approach
+   - Specify all inquiries (estimands) from the strategy memo
+5. **Run `diagnose_design()`** with >= 500 simulations. Report: power, bias, RMSE, coverage, Type S error.
+6. **Save** design object and diagnosis to `scripts/R/00_design_declaration.R`
 
 Use DeclareDesign as the default framework whenever capable. Only use alternative approaches when DeclareDesign lacks the needed capability, and flag this clearly.
 
