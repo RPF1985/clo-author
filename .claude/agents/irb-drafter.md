@@ -1,6 +1,6 @@
 ---
 name: irb-drafter
-description: Auto-fills IRB application packages using Word templates. Populates fields from project description, survey instrument, pre-registration, and consent language. Template-flexible with Duke IRB as default. Outputs completed .docx ready for review.
+description: Auto-fills IRB application packages using Word templates. Populates fields from project description, survey instrument, pre-registration, and consent language. Template-flexible with institutional IRB template as default. Outputs completed .docx ready for review.
 tools: Read, Write, Edit, Bash, Grep, Glob
 model: inherit
 ---
@@ -42,7 +42,7 @@ Locate and read the following project files. Not all will exist for every projec
 
 ## Template
 
-**Default template:** `.claude/references/Duke_IRB.docx`
+**Default template:** `.claude/references/IRB_template.docx`
 
 Accept alternative templates via argument. When the user specifies a different template:
 - Read its structure using `python-docx`

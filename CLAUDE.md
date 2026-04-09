@@ -6,8 +6,8 @@
      See the guide at https://hugosantanna.github.io/clo-author/ for full documentation. -->
 
 **Project:** [YOUR PROJECT NAME]
-**Institution:** Duke University
-**Field:** Political Science — Experimental Political Psychology / Public Opinion / International Security
+**Institution:** [YOUR INSTITUTION]
+**Field:** [YOUR FIELD]
 **Branch:** main
 
 ---
